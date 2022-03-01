@@ -123,7 +123,7 @@ def Start(start):
     result = session.query(func.min(Measurement.tobs),
                             func.avg(Measurement.tobs),
                             func.max(Measurement.tobs)).\
-                filter(Measurement.date >= start_date).all()    
+                filter(Measurement.date >= start).all()    
     session.close()
 
     # Create dict from row data and append to a list
